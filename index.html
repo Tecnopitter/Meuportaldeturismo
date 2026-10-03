@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra São Paulo | Guia de Destinos</title>
+    <meta name="description" content="Explore os melhores destinos turísticos, culturais e gastronômicos do estado de São Paulo.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">Paulista<span style="color: var(--color-accent-yellow)">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#destinos">Destinos</a></li>
+                <li><a href="#experiencias">Experiências</a></li>
+                <li><a href="#cultura">Cultura</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button class="btn btn-outline" style="padding: 8px 16px;">
+                <i data-lucide="search" style="width: 18px; height: 18px;"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>A verdadeira essência de São Paulo</h1>
+                <p>Das praias intocadas do litoral norte às serras aconchegantes e à vida pulsante da capital. Descubra lugares inesquecíveis.</p>
+                <div style="display: flex; gap: 16px;">
+                    <a href="#destinos" class="btn btn-primary">Comece a Explorar</a>
+                    <a href="#cultura" class="btn btn-outline">Roteiros Culturais</a>
+                </div>
+            </div>
+            <div class="hero-image-wrap">
+                <!-- Imagem do MASP / Av Paulista -->
+                <img src="https://images.unsplash.com/photo-1543059080-d9b73b2ae734?auto=format&fit=crop&q=80&w=1200" alt="Avenida Paulista, São Paulo" class="hero-img">
+                <div class="hero-badge">
+                    <div class="badge-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div>
+                        <p style="font-size: 12px; color: var(--color-text-muted); margin: 0;">Destino em Destaque</p>
+                        <p style="font-weight: 600; font-family: var(--font-body); margin: 0;">Capital, SP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section id="destinos" class="section-destinations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Destinos Populares</h2>
+                <div class="slider-controls">
+                    <button class="slider-btn" id="slide-left"><i data-lucide="arrow-left"></i></button>
+                    <button class="slider-btn" id="slide-right"><i data-lucide="arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="destinations-slider" id="destinations-slider">
+                <!-- Card 1 -->
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1588693892718-4b727dbf81dc?auto=format&fit=crop&q=80&w=600" alt="Campos do Jordão" class="destination-img">
+                    <div class="destination-info">
+                        <h3>Campos do Jordão</h3>
+                        <p>Serra da Mantiqueira • Frio e Charme</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1601323389257-2c97486f0302?auto=format&fit=crop&q=80&w=600" alt="Ilhabela" class="destination-img">
+                    <div class="destination-info">
+                        <h3>Ilhabela</h3>
+                        <p>Litoral Norte • Praias e Natureza</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1629858341680-e377f0a711de?auto=format&fit=crop&q=80&w=600" alt="Holambra" class="destination-img">
+                    <div class="destination-info">
+                        <h3>Holambra</h3>
+                        <p>Interior • Cidade das Flores</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1634599052219-482a5c37494a?auto=format&fit=crop&q=80&w=600" alt="Ubatuba" class="destination-img">
+                    <div class="destination-info">
+                        <h3>Ubatuba</h3>
+                        <p>Litoral Norte • Surf e Trilhas</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1577789436730-80360a0a5585?auto=format&fit=crop&q=80&w=600" alt="Brotas" class="destination-img">
+                    <div class="destination-info">
+                        <h3>Brotas</h3>
+                        <p>Interior • Ecoturismo e Aventura</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences (Filterable) -->
+    <section id="experiencias" class="section-experiences container">
+        <h2>Experiências Paulistas</h2>
+        
+        <div class="tabs">
+            <button class="tab-btn active" data-filter="all">Todos</button>
+            <button class="tab-btn" data-filter="restaurantes">Restaurantes</button>
+            <button class="tab-btn" data-filter="padarias">Padarias</button>
+            <button class="tab-btn" data-filter="hospedagens">Hospedagens</button>
+        </div>
+
+        <div class="experiences-grid" id="experiences-grid">
+            <!-- Restaurante -->
+            <div class="experience-item" data-category="restaurantes">
+                <span class="badge-category">Restaurante</span>
+                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=600" alt="Restaurante Italiano">
+                <div class="experience-overlay">
+                    <h3>Cantina Tradicional</h3>
+                    <p>Bixiga, São Paulo - Massas artesanais</p>
+                </div>
+            </div>
+            <!-- Padaria -->
+            <div class="experience-item" data-category="padarias">
+                <span class="badge-category">Padaria</span>
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600" alt="Padaria">
+                <div class="experience-overlay">
+                    <h3>Pães Artesanais & Cia</h3>
+                    <p>Pinheiros, São Paulo - Fermentação natural</p>
+                </div>
+            </div>
+            <!-- Hospedagem -->
+            <div class="experience-item" data-category="hospedagens">
+                <span class="badge-category">Hospedagem</span>
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=600" alt="Hotel Boutique">
+                <div class="experience-overlay">
+                    <h3>Refúgio Boutique</h3>
+                    <p>Campos do Jordão - Luxo na serra</p>
+                </div>
+            </div>
+            <!-- Restaurante -->
+            <div class="experience-item" data-category="restaurantes">
+                <span class="badge-category">Restaurante</span>
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=600" alt="Gastronomia">
+                <div class="experience-overlay">
+                    <h3>Mercado Municipal</h3>
+                    <p>Centro, São Paulo - O famoso sanduíche de mortadela</p>
+                </div>
+            </div>
+            <!-- Hospedagem -->
+            <div class="experience-item" data-category="hospedagens">
+                <span class="badge-category">Hospedagem</span>
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=600" alt="Resort">
+                <div class="experience-overlay">
+                    <h3>Eco Resort Spa</h3>
+                    <p>Mairiporã - Contato puro com a natureza</p>
+                </div>
+            </div>
+            <!-- Padaria -->
+            <div class="experience-item" data-category="padarias">
+                <span class="badge-category">Padaria</span>
+                <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&q=80&w=600" alt="Doces">
+                <div class="experience-overlay">
+                    <h3>Confeitaria Clássica</h3>
+                    <p>Mooca, São Paulo - Tradição italiana</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section id="cultura" class="section-culture">
+        <div class="container">
+            <h2>Pulsante, diversa e inesquecível</h2>
+            <div class="culture-grid">
+                <div class="culture-text">
+                    <p>São Paulo é o coração cultural da América Latina. De museus mundialmente premiados a arte de rua vibrante, sempre há algo novo para descobrir.</p>
+                    <ul class="culture-features">
+                        <li>
+                            <i data-lucide="check-circle" class="feature-icon"></i>
+                            <span>Mais de 100 museus renomados</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check-circle" class="feature-icon"></i>
+                            <span>Murais icônicos e galerias de arte</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check-circle" class="feature-icon"></i>
+                            <span>Centros culturais históricos gratuitos</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="margin-top: 16px;">Ver Agenda Cultural</a>
+                </div>
+                <div>
+                    <!-- MASP ou Beco do Batman image -->
+                    <img src="https://images.unsplash.com/photo-1563214227-2b7e19fcf454?auto=format&fit=crop&q=80&w=1000" alt="MASP São Paulo" class="culture-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer & Newsletter -->
+    <footer>
+        <div class="container">
+            <div id="contato" class="newsletter-wrapper">
+                <div class="newsletter-text">
+                    <h3>Inscreva-se na nossa newsletter</h3>
+                    <p>Receba roteiros exclusivos e dicas secretas de São Paulo direto no seu email.</p>
+                </div>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Inscrito com sucesso!');">
+                    <input type="email" placeholder="Seu melhor email" required>
+                    <button type="submit">Inscrever</button>
+                </form>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 16px; display: block;">Paulista<span style="color: var(--color-accent-yellow)">.</span></a>
+                    <p style="color: var(--color-text-muted); font-size: 14px;">Seu guia definitivo para explorar o estado de São Paulo, descobrindo lugares incríveis, culinária impecável e muita cultura.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#destinos">Destinos</a></li>
+                        <li><a href="#experiencias">Experiências</a></li>
+                        <li><a href="#cultura">Cultura</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Descubra</h4>
+                    <ul>
+                        <li><a href="#">Litoral Norte</a></li>
+                        <li><a href="#">Serra da Mantiqueira</a></li>
+                        <li><a href="#">Capital Paulista</a></li>
+                        <li><a href="#">Roteiro do Vinho</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="#">(11) 9999-9999</a></li>
+                        <li><a href="#">contato@paulista.com.br</a></li>
+                        <li style="margin-top: 16px; display: flex; gap: 12px;">
+                            <!-- Social icons -->
+                            <i data-lucide="instagram" style="color: var(--color-text-main); cursor: pointer;"></i>
+                            <i data-lucide="facebook" style="color: var(--color-text-main); cursor: pointer;"></i>
+                            <i data-lucide="twitter" style="color: var(--color-text-main); cursor: pointer;"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Guia Paulista. Todos os direitos reservados.</p>
+                <div style="display: flex; gap: 24px;">
+                    <a href="#" style="color: var(--color-text-muted); text-decoration: none;">Política de Privacidade</a>
+                    <a href="#" style="color: var(--color-text-muted); text-decoration: none;">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <!-- Chat Box -->
+        <div class="chat-box" id="chat-box">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">
+                        <i data-lucide="user"></i>
+                        <span class="online-indicator"></span>
+                    </div>
+                    <div>
+                        <h4>Atendimento</h4>
+                        <p>Online agora</p>
+                    </div>
+                </div>
+                <button class="chat-close-btn" id="chat-close-btn">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            
+            <div class="chat-messages">
+                <div class="message received">
+                    <p>Olá! Como posso ajudar você a planejar sua viagem por São Paulo hoje?</p>
+                    <span class="message-time">Agora</span>
+                </div>
+            </div>
+            
+            <div class="chat-input-area">
+                <input type="text" placeholder="Digite sua mensagem...">
+                <button class="chat-send-btn">
+                    <i data-lucide="send"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat Toggle Button -->
+        <button class="chat-toggle-btn" id="chat-toggle-btn">
+            <i data-lucide="message-square"></i>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Inicializa os ícones do Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>
